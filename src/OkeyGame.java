@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
 
 public class OkeyGame {
 	
-	
+//deneme-branch-from-dev
 		
 	
 	
@@ -21,7 +21,7 @@ public class OkeyGame {
 		String[] shuffledStones=shuffleStones(gameStones);
 		String okey=chooseOkey(shuffledStones);
 		System.out.println("OKEY:"+okey);
-		List<List<String>> players=dealStonesToPlayers(shuffledStones);// 4 tane List<String> tipinde kullanýcý döner her bir kullanýcýnýn 14 taþý vardýr(Ýlk kullanýcý hariç, ilk kullanýcý 15 taþa sahiptir.)
+		List<List<String>> players=dealStonesToPlayers(shuffledStones);// 4 tane List<String> tipinde kullan?c? d?ner her bir kullan?c?n?n 14 ta?? vard?r(?lk kullan?c? hari?, ilk kullan?c? 15 ta?a sahiptir.)
 		
 	}
 	
@@ -31,7 +31,7 @@ public class OkeyGame {
 	public static String[] createOkeyStones() { 
 		String[] stones=new String[106];
 		int arrayIndex=0;
-		String[] colours= {"sarý","mavi","kýrmýzý","siyah"};
+		String[] colours= {"sar?","mavi","k?rm?z?","siyah"};
 		for(int j=0;j<2;j++){
 			for (String cls : colours) {
 			for(int i=1;i<14;i++) {
@@ -66,9 +66,9 @@ public class OkeyGame {
 				okey=colour+"-"+(number+1);
 				
 			}else {
-				okey=colour+"-"+(1);//13 göstergeyse okey 1 olur
+				okey=colour+"-"+(1);//13 g?stergeyse okey 1 olur
 			}
-			stones[rndIndex]=null; //Göstergenin bir tanesi oyun taþlarýndan çýkarýlýr oyunda 1 tane gösterge kalýr
+			stones[rndIndex]=null; //G?stergenin bir tanesi oyun ta?lar?ndan ??kar?l?r oyunda 1 tane g?sterge kal?r
 			
 		}else {
 			chooseOkey(stones);
@@ -80,7 +80,7 @@ public class OkeyGame {
 	public static List<List<String>> dealStonesToPlayers(String[] stones){
 		Random random=new Random();
 		List<List<String>> players=new ArrayList<>();
-		List<Integer> numbers=IntStream.rangeClosed(0, 105).boxed().collect(Collectors.toList());//random daðýtmak için index numaralarý
+		List<Integer> numbers=IntStream.rangeClosed(0, 105).boxed().collect(Collectors.toList());//random da??tmak i?in index numaralar?
 		
 		List<String> player=new ArrayList<>();
 		for(int i=0;i<4;i++) {
@@ -88,7 +88,7 @@ public class OkeyGame {
 				for(int j=0;j<15;j++) {
 					int rnd=random.nextInt(numbers.size());
 					String stone=stones[numbers.get(rnd)];
-					while(stone==null) { //Taþlarýn içinden göstergenin biri silindiði için taþýn null gelmesinin önüne geçmek için bir kontrol
+					while(stone==null) { //Ta?lar?n i?inden g?stergenin biri silindi?i i?in ta??n null gelmesinin ?n?ne ge?mek i?in bir kontrol
 						rnd=random.nextInt(numbers.size());
 						stone=stones[numbers.get(rnd)];
 					}
